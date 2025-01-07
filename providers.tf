@@ -14,10 +14,10 @@ provider "aws" {
   }
 }
 
-module tags {
-  source = "./tags"
-  project_name = var.project_name
-  env = var.env
-  team = var.team
+module "tags" {
+  source         = "./tags"
+  project_name   = var.project_name
+  env            = var.env
+  team           = var.team
   project_budget = var.project_budget
 }

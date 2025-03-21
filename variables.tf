@@ -20,6 +20,29 @@ variable "env" {
 variable "team" {
   description = "The team responsible for the project"
   type        = string
-  default     = "my-awesome-team"
+  default     = "platform"
+}
 
+variable "eks_cluster_version" {
+  description = "The version of the EKS cluster"
+  type        = string
+  default     = "1.32"
+}
+
+variable "allowed_public_cidrs" {
+  description = "value of the allowed public CIDR"
+  type        = list(string)
+  default     = ["189.174.149.44/32"]
+}
+
+variable "cluster_endpoint_public_access" {
+  description = "Indicates whether or not the cluster endpoint is public"
+  type        = bool
+  default     = true
+}
+
+variable "cluster_endpoint_private_access" {
+  description = "Indicates whether or not the cluster endpoint is private"
+  type        = bool
+  default     = true
 }

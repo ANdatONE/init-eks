@@ -32,7 +32,7 @@ variable "eks_cluster_version" {
 variable "allowed_public_cidrs" {
   description = "value of the allowed public CIDR"
   type        = list(string)
-  default     = ["189.174.149.44/32"]
+  default     = []
 }
 
 variable "cluster_endpoint_public_access" {
